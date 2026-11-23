@@ -12,9 +12,9 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { SITE_CONFIG } from '../../data/config';
 
 export const metadata = {
-  title: 'About Televo IPTV | UK IPTV Service & Streaming Mission',
+  title: 'About Televo IPTV | The Leading US 4K IPTV Streaming Service',
   description:
-    'Learn more about Televo IPTV. Discover our commitment to stable high-definition streaming, transparent GBP pricing, and friendly UK customer service.',
+    'Learn more about Televo IPTV. Discover our commitment to stable high-definition streaming, transparent USD pricing, and friendly 24/7 customer service.',
   alternates: {
     canonical: '/about',
   },
@@ -30,17 +30,17 @@ export default function AboutPage() {
 
         {/* Hero */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A2E66] text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A1E3F] text-xs font-semibold mb-4">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             Our Service Philosophy
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#0A2E66] tracking-tight">
-            About Televo IPTV — Dedicated UK Streaming
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0A1E3F] tracking-tight">
+            About Televo IPTV — Dedicated US Streaming
           </h1>
-          <div className="uk-underline"></div>
+          <div className="us-underline"></div>
           <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
-            Providing dependable, high-definition television and expansive on-demand entertainment tailored specifically for UK households, accessible through our{' '}
-            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            Providing dependable, high-definition television, live sports (NFL, NBA, MLB), and expansive on-demand entertainment tailored specifically for American households, accessible through our{' '}
+            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               flexible subscription options
             </Link>
             .
@@ -50,19 +50,19 @@ export default function AboutPage() {
         {/* Brand Mission Section */}
         <div className="max-w-none text-slate-700 space-y-6 text-sm sm:text-base leading-relaxed mb-14">
           <p>
-            <strong>Televo</strong> is a specialized British entertainment brand, and <strong>Televo IPTV</strong> is our premier digital IPTV service built to deliver reliable television streaming across the United Kingdom. We supply live TV channels and high-definition streams directly over your existing home broadband network, empowering British viewers to bypass expensive satellite dishes, rooftop aerials, and rigid multi-year cable contracts by exploring our{' '}
-            <Link href="/pricing" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <strong>Televo</strong> is a specialized television streaming brand, and <strong>Televo IPTV</strong> is our premier digital IPTV service built to deliver reliable entertainment across the United States. We supply live TV channels and high-definition streams directly over your existing home broadband network, empowering American viewers to bypass expensive cable equipment leases, broadcast TV surcharges, and rigid multi-year contracts by exploring our{' '}
+            <Link href="/pricing" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               transparent IPTV pricing
             </Link>
             .
           </p>
           <p>
-            Our commitment is centered on quality and simplicity: delivering stable streaming credentials, crystal-clear 4K and Full HD feeds, comprehensive multi-device compatibility via our{' '}
-            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            Our commitment is centered on quality and simplicity: delivering stable streaming credentials, crystal-clear 4K and Full HD 60 FPS feeds, comprehensive multi-device compatibility via our{' '}
+            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               installation tutorials
             </Link>
-            , and accessible British customer care through our{' '}
-            <Link href="/contact" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            , and accessible 24/7 customer care through our{' '}
+            <Link href="/contact" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               support team
             </Link>
             .
@@ -75,10 +75,10 @@ export default function AboutPage() {
             <div className="w-10 h-10 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600 mb-4">
               <Zap className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">Technical Excellence &amp; UK Routing</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">Technical Excellence &amp; US Routing</h2>
             <p className="text-xs text-slate-600 leading-relaxed">
-              We continually optimize our server clusters to interface seamlessly with primary UK broadband networks—including BT, Virgin Media, Sky, TalkTalk, and EE. This dedicated routing drastically reduces latency, detailed further in our{' '}
-              <Link href="/blog/how-to-fix-iptv-buffering" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              We continually optimize our server clusters to interface seamlessly with primary US broadband networks—including Comcast Xfinity, AT&amp;T Fiber, Spectrum, Verizon Fios, and Cox. This dedicated routing drastically reduces latency and eliminates buffering, detailed further in our{' '}
+              <Link href="/blog/how-to-fix-iptv-buffering" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 anti-buffering guide
               </Link>
               .
@@ -89,10 +89,10 @@ export default function AboutPage() {
             <div className="w-10 h-10 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-4">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">Prepaid Freedom Without Contracts</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">Prepaid Freedom Without Contracts</h2>
             <p className="text-xs text-slate-600 leading-relaxed">
-              All Televo IPTV plans are 100% prepaid in British Pounds (£). We never enforce automatic bank debits, surprise renewals, or cancellation penalties. Explore our packages on the{' '}
-              <Link href="/pricing" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              All Televo IPTV plans are 100% prepaid in US Dollars ($). We never enforce automatic recurring debits, surprise renewals, or equipment rental fees. Explore our packages on the{' '}
+              <Link href="/pricing" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 plans comparison page
               </Link>
               .
@@ -103,14 +103,14 @@ export default function AboutPage() {
             <div className="w-10 h-10 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-600 mb-4">
               <Tv className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">Universal Multi-Device Freedom</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">Universal Multi-Device Freedom</h2>
             <p className="text-xs text-slate-600 leading-relaxed">
               Whether you prefer streaming on an{' '}
-              <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 Amazon Fire TV Stick
               </Link>
               ,{' '}
-              <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 Samsung Smart TV
               </Link>
               , LG webOS, Apple TV, iPhone, or PC, Televo IPTV supports standard Xtream Codes API and M3U formats without restrictive hardware locks.
@@ -121,10 +121,10 @@ export default function AboutPage() {
             <div className="w-10 h-10 rounded-xl bg-red-100 border border-red-200 flex items-center justify-center text-red-600 mb-4">
               <HeartHandshake className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">Dedicated British Customer Care</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">Dedicated 24/7 Customer Care</h2>
             <p className="text-xs text-slate-600 leading-relaxed">
-              When you need assistance with player app installation, EPG synchronisation, or stream optimization, you communicate directly with friendly, knowledgeable UK specialists via our{' '}
-              <Link href="/contact" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              When you need assistance with player app installation, EPG synchronization across US time zones, or stream optimization, you communicate directly with friendly, knowledgeable specialists via our{' '}
+              <Link href="/contact" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 contact &amp; customer care desk
               </Link>
               .
@@ -133,7 +133,7 @@ export default function AboutPage() {
         </div>
 
         {/* Commitment to Transparency */}
-        <div className="p-8 rounded-2xl bg-[#0A2E66] text-white text-center mb-14">
+        <div className="p-8 rounded-2xl bg-[#0A1E3F] text-white text-center mb-14">
           <h2 className="text-2xl font-bold text-white mb-3">Our 7-Day Risk-Free Guarantee</h2>
           <p className="text-sm text-blue-100 max-w-xl mx-auto leading-relaxed mb-6">
             We want you to experience Televo IPTV with absolute certainty. Every new subscription is backed by our{' '}
@@ -145,7 +145,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/subscription"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-[#0A2E66] bg-white hover:bg-slate-100 shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-[#0A1E3F] bg-white hover:bg-slate-100 shadow-md transition-all"
             >
               Explore Our IPTV Plans <ArrowRight className="w-4 h-4" />
             </Link>

@@ -9,9 +9,9 @@ import PricingSection from '../../components/PricingSection';
 import { FAQ_DATA } from '../../data/config';
 
 export const metadata = {
-  title: 'Televo IPTV UK Subscription | Premium 4K Streaming Plans',
+  title: 'Buy IPTV Subscription USA | 4K Streaming Plans in USD',
   description:
-    'Select your Televo IPTV subscription duration in GBP. 50,000+ live UK channels, 200,000+ VOD box sets, 4K UHD sports, and rapid WhatsApp delivery.',
+    'Select your Televo IPTV subscription in USD. 50,000+ live US channels, live NFL, NBA, PPV events, 200,000+ 4K movies, and 5-15 minute instant delivery.',
   alternates: {
     canonical: '/subscription',
   },
@@ -30,15 +30,15 @@ export default function SubscriptionPage() {
           <Breadcrumbs items={breadcrumbsList} />
           <div className="text-center max-w-3xl mx-auto mt-4">
             <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-              Televo IPTV UK Subscription Plans
+              Televo IPTV USA Subscription Plans
             </h1>
-            <div className="uk-underline"></div>
+            <div className="us-underline"></div>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mt-2">
-              Select the ideal Televo IPTV subscription duration and simultaneous screen connections for your home. Every package includes 4K Ultra HD streams, full 7-day UK EPG schedule, over{' '}
+              Select the ideal Televo IPTV subscription duration and simultaneous screen connections for your home. Every package includes 4K Ultra HD streams, full 7-day US EPG schedule, over{' '}
               <Link href="/pricing" className="text-cyan-300 font-semibold underline hover:text-white">
                 200,000 on-demand titles
               </Link>
-              , and responsive UK customer support via our{' '}
+              , and responsive 24/7 customer support via our{' '}
               <Link href="/guide-installation" className="text-cyan-300 font-semibold underline hover:text-white">
                 device setup guides
               </Link>
@@ -53,7 +53,7 @@ export default function SubscriptionPage() {
 
       {/* Guarantee & Features Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="p-8 rounded-2xl bg-[#0A2E66] text-white">
+        <div className="p-8 rounded-2xl bg-[#0A1E3F] text-white">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-3.5">
               <ShieldCheck className="w-8 h-8 text-emerald-400 shrink-0" />
@@ -105,17 +105,17 @@ export default function SubscriptionPage() {
 
         {/* FAQ Accordion */}
         <div className="max-w-3xl mx-auto mt-16">
-          <h2 className="text-2xl font-black text-[#0A2E66] text-center mb-2">
+          <h2 className="text-2xl font-black text-[#0A1E3F] text-center mb-2">
             Televo IPTV Subscription &amp; Setup FAQ
           </h2>
-          <div className="uk-underline"></div>
+          <div className="us-underline"></div>
           <div className="space-y-3 mt-6">
             {FAQ_DATA[1].items.map((item, idx) => (
               <details
                 key={idx}
                 className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm open:shadow-md transition-shadow"
               >
-                <summary className="font-bold text-sm sm:text-base text-[#0A2E66] cursor-pointer list-none flex items-center justify-between gap-4">
+                <summary className="font-bold text-sm sm:text-base text-[#0A1E3F] cursor-pointer list-none flex items-center justify-between gap-4">
                   <span>{item.question}</span>
                   <span className="text-[#0854c4] font-black group-open:rotate-45 transition-transform text-lg">
                     +
@@ -131,7 +131,7 @@ export default function SubscriptionPage() {
           <div className="text-center mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 text-sm text-[#0A2E66] hover:text-[#0854c4] font-bold"
+              className="inline-flex items-center gap-1.5 text-sm text-[#0A1E3F] hover:text-[#0854c4] font-bold"
             >
               Have a custom request or need multi-room consultation? Contact us →
             </Link>

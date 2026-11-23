@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }) {
     },
     publisher: {
       '@type': 'Organization',
-      name: SITE_CONFIG.brandName,
+      name: SITE_CONFIG.serviceName,
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_CONFIG.domain}/favicon.svg`,
@@ -67,132 +67,125 @@ export default async function BlogPostPage({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_CONFIG.domain}/blog/${post.slug}/`,
+      '@id': `${SITE_CONFIG.domain}/blog/${post.slug}`,
     },
   };
 
   const breadcrumbsList = [
-    { name: 'Blog', path: '/blog' },
+    { name: 'Blog & US Guides', path: '/blog' },
     { name: post.title, path: `/blog/${post.slug}` },
   ];
 
-  const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
-    <div className="pt-4 pb-12 sm:pt-6 bg-white text-[#2b3340] min-h-screen">
+    <article className="pt-4 pb-12 sm:pt-6 bg-white text-[#2b3340] min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbsList} />
 
         {/* Article Header */}
-        <header className="mb-10 pb-8 border-b border-slate-200">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs font-bold px-2.5 py-1 rounded-md bg-blue-50 text-[#0A2E66]">
-              {post.category}
+        <header className="mb-10 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0A1E3F] text-xs font-semibold mb-4">
+            <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+            {post.category}
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0A1E3F] tracking-tight leading-tight">
+            {post.title}
+          </h1>
+
+          <div className="us-underline"></div>
+
+          <div className="flex items-center justify-center gap-4 text-xs text-slate-500 mt-4 flex-wrap">
+            <span className="flex items-center gap-1">
+              <Calendar className="w-3.5 h-3.5" />
+              {post.date}
             </span>
-            <span className="text-xs text-slate-500 flex items-center gap-1">
+            <span>•</span>
+            <span className="flex items-center gap-1">
               <Clock className="w-3.5 h-3.5" />
               {post.readTime}
             </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0A2E66] tracking-tight leading-tight">
-            {post.title}
-          </h1>
-          <div className="uk-underline !mx-0"></div>
-
-          <div className="flex items-center gap-4 text-xs text-slate-500 mt-4">
-            <span className="flex items-center gap-1.5 font-semibold text-slate-700">
-              <User className="w-3.5 h-3.5 text-blue-600" />
-              Televo IPTV UK Editorial Team
-            </span>
             <span>•</span>
-            <span className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5" />
-              {post.date}
+            <span className="flex items-center gap-1">
+              <User className="w-3.5 h-3.5" />
+              Televo Technical Editorial
             </span>
           </div>
         </header>
 
-        {/* Article Body Content */}
+        {/* Article Body */}
         <div
-          className="prose max-w-none text-slate-700 leading-relaxed text-sm sm:text-base space-y-6"
+          className="prose prose-slate max-w-none prose-headings:font-black prose-headings:text-[#0A1E3F] prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:leading-relaxed prose-p:text-slate-700 prose-li:text-slate-700 prose-strong:text-slate-900 prose-a:text-[#0854c4] prose-a:underline hover:prose-a:text-[#0A1E3F] mb-16"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* Post Bottom CTA Card */}
-        <div className="mt-14 p-8 rounded-2xl bg-[#0A2E66] text-white">
-          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-            Ready to Try Televo IPTV in the UK?
+        {/* In-Article Conversion Card */}
+        <div className="my-12 p-8 rounded-3xl bg-[#0A1E3F] text-white text-center shadow-xl">
+          <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+          <h3 className="text-xl sm:text-2xl font-black mb-2">
+            Ready to Stream Over 50,000 Channels in 4K UHD?
           </h3>
-          <p className="text-xs sm:text-sm text-blue-100 max-w-lg mb-6 leading-relaxed">
-            Experience reliable 4K streaming with zero contracts on our{' '}
-            <Link href="/subscription" className="text-cyan-300 font-semibold underline hover:text-white">
-              IPTV subscription plans
-            </Link>
-            , instant digital setup via our{' '}
-            <Link href="/guide-installation" className="text-cyan-300 font-semibold underline hover:text-white">
-              installation centre
-            </Link>
-            , and our risk-free{' '}
-            <Link href="/refund-policy" className="text-cyan-300 font-semibold underline hover:text-white">
-              7-day money-back guarantee
-            </Link>
-            .
+          <p className="text-xs sm:text-sm text-blue-100 max-w-lg mx-auto mb-6 leading-relaxed">
+            Get instant activation within 5 to 15 minutes. Explore our flexible, contract-free{' '}
+            <Link href="/subscription" className="text-white font-bold underline hover:text-cyan-200">
+              IPTV subscriptions
+            </Link>{' '}
+            backed by our risk-free 7-day money-back guarantee.
           </p>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/subscription"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-[#0A2E66] bg-white hover:bg-slate-100 transition-all"
+              className="px-6 py-3 rounded-xl font-bold text-sm text-[#0A1E3F] bg-white hover:bg-slate-100 shadow-md transition-all"
             >
-              <Zap className="w-4 h-4" />
-              View IPTV Plans (GBP)
+              View IPTV Pricing Plans
             </Link>
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-600/30 transition-all"
             >
               <MessageSquare className="w-4 h-4" />
-              WhatsApp Help
+              Order on WhatsApp
             </a>
           </div>
         </div>
 
-        {/* Related Guides */}
-        <div className="mt-14 pt-10 border-t border-slate-200">
-          <h3 className="text-xl font-bold text-[#0A2E66] mb-6">
-            Related UK Streaming Tutorials
-          </h3>
+        {/* Related Articles */}
+        <section className="pt-8 border-t border-slate-200">
+          <h2 className="text-xl font-black text-[#0A1E3F] mb-6">
+            Recommended Streaming Guides
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {relatedPosts.map((rel) => (
+            {relatedPosts.map((rPost) => (
               <Link
-                key={rel.slug}
-                href={`/blog/${rel.slug}`}
-                className="p-5 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:bg-white transition-all group flex flex-col justify-between"
+                key={rPost.slug}
+                href={`/blog/${rPost.slug}`}
+                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:bg-white transition-all group flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-[11px] font-bold text-blue-600 block mb-1">
-                    {rel.category}
+                  <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider block mb-2">
+                    {rPost.category}
                   </span>
-                  <h4 className="text-sm font-bold text-[#0A2E66] group-hover:text-blue-600 line-clamp-2">
-                    {rel.title}
-                  </h4>
+                  <h3 className="text-sm font-bold text-[#0A1E3F] group-hover:text-blue-600 line-clamp-2 leading-snug">
+                    {rPost.title}
+                  </h3>
                 </div>
-                <div className="mt-4 pt-2 border-t border-slate-200 flex items-center justify-between text-xs text-blue-600 font-bold">
-                  <span>Read Article</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                <div className="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+                  <span>{rPost.readTime}</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             ))}
           </div>
-        </div>
-      </article>
-    </div>
+        </section>
+      </div>
+    </article>
   );
 }

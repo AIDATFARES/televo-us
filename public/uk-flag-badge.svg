@@ -1,26 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="60" height="30">
   <defs>
-    <clipPath id="flagRound">
+    <clipPath id="usRound">
       <rect width="60" height="30" rx="5" ry="5"/>
     </clipPath>
-    <clipPath id="t">
-      <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-    </clipPath>
+    <g id="star">
+      <polygon fill="#FFFFFF" points="0,-1.05 0.32,-0.32 1.05,-0.32 0.46,0.11 0.68,0.85 0,0.42 -0.68,0.85 -0.46,0.11 -1.05,-0.32 -0.32,-0.32"/>
+    </g>
   </defs>
-  
-  <!-- Flag content with rounded corners -->
-  <g clip-path="url(#flagRound)">
-    <!-- Royal Navy Blue Field -->
-    <rect width="60" height="30" fill="#012169"/>
-    <!-- St Andrew Saltire (White diagonal) -->
-    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#ffffff" stroke-width="6.5"/>
-    <!-- St Patrick Saltire (Red diagonal counterchanged) -->
-    <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4.2"/>
-    <!-- St George Cross Fimbriation (White cross) -->
-    <path d="M30,0 v30 M0,15 h60" stroke="#ffffff" stroke-width="10"/>
-    <!-- St George Cross (Red cross) -->
-    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+
+  <g clip-path="url(#usRound)">
+    <!-- 13 Stripes -->
+    <rect width="60" height="30" fill="#B22234"/>
+    <rect y="2.308" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="6.923" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="11.538" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="16.154" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="20.769" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="25.385" width="60" height="2.308" fill="#FFFFFF"/>
+
+    <!-- Blue Canton -->
+    <rect width="25" height="16.154" fill="#002868"/>
+
+    <!-- Star rows -->
+    <use href="#star" x="3" y="2.5" />
+    <use href="#star" x="7.5" y="2.5" />
+    <use href="#star" x="12" y="2.5" />
+    <use href="#star" x="16.5" y="2.5" />
+    <use href="#star" x="21" y="2.5" />
+
+    <use href="#star" x="5.25" y="5.2" />
+    <use href="#star" x="9.75" y="5.2" />
+    <use href="#star" x="14.25" y="5.2" />
+    <use href="#star" x="18.75" y="5.2" />
+
+    <use href="#star" x="3" y="8" />
+    <use href="#star" x="7.5" y="8" />
+    <use href="#star" x="12" y="8" />
+    <use href="#star" x="16.5" y="8" />
+    <use href="#star" x="21" y="8" />
+
+    <use href="#star" x="5.25" y="10.8" />
+    <use href="#star" x="9.75" y="10.8" />
+    <use href="#star" x="14.25" y="10.8" />
+    <use href="#star" x="18.75" y="10.8" />
+
+    <use href="#star" x="3" y="13.5" />
+    <use href="#star" x="7.5" y="13.5" />
+    <use href="#star" x="12" y="13.5" />
+    <use href="#star" x="16.5" y="13.5" />
+    <use href="#star" x="21" y="13.5" />
   </g>
-  <!-- Subtle outline border -->
-  <rect x="0.5" y="0.5" width="59" height="29" rx="4.5" fill="none" stroke="rgba(10,46,102,0.25)" stroke-width="1"/>
+
+  <rect x="0.5" y="0.5" width="59" height="29" rx="4.5" fill="none" stroke="rgba(10,30,63,0.3)" stroke-width="1"/>
 </svg>

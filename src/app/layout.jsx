@@ -7,11 +7,11 @@ import { SITE_CONFIG } from '../data/config';
 export const metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
   title: {
-    default: 'Televo IPTV UK | Premium IPTV Subscription & Streaming Service',
-    template: '%s | Televo IPTV UK',
+    default: 'Televo IPTV USA | #1 Premium 4K IPTV Subscription in the US',
+    template: '%s | Televo IPTV USA',
   },
   description:
-    'Discover Televo IPTV in the UK. Explore reliable 4K IPTV subscriptions in GBP, compatible devices, step-by-step setup guides, and dedicated UK customer support.',
+    'Stream 50,000+ live US & international channels, live NFL, NBA, MLB, PPV fight nights, and 200,000+ VOD movies in 4K UHD. Instant 5-min setup, anti-freeze servers & 7-day money-back guarantee.',
   robots: {
     index: true,
     follow: true,
@@ -25,27 +25,27 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_GB',
+    locale: 'en_US',
     url: SITE_CONFIG.domain,
     siteName: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.serviceName}`,
-    title: 'Televo IPTV UK | Premium IPTV Subscription & Streaming Service',
+    title: 'Televo IPTV USA | Premium 4K IPTV Subscription & Streaming Service',
     description:
-      'Discover Televo IPTV in the UK. Explore reliable IPTV subscriptions in GBP, compatible devices, and dedicated UK customer support on WhatsApp.',
+      'Discover Televo IPTV in the United States. 50,000+ live TV channels, NFL, NBA, PPV events, 200,000+ VOD movies in 4K UHD with 24/7 WhatsApp support.',
     images: [
       {
         url: `${SITE_CONFIG.domain}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Televo IPTV UK | Premium 4K IPTV Subscription & Streaming Service',
+        alt: 'Televo IPTV USA | Premium 4K IPTV Subscription & Streaming Service',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Televo IPTV UK | Premium IPTV Subscription & Streaming Service',
+    title: 'Televo IPTV USA | Premium 4K IPTV Subscription & Streaming Service',
     description:
-      'Discover Televo IPTV in the UK. Explore reliable IPTV subscriptions in GBP, compatible devices, and dedicated UK customer support.',
+      'Discover Televo IPTV in the United States. 50,000+ live TV channels, NFL, NBA, PPV events, 200,000+ VOD movies in 4K UHD with 24/7 WhatsApp support.',
     images: [`${SITE_CONFIG.domain}/og-image.png`],
   },
   alternates: {
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
             url: SITE_CONFIG.whatsappUrl,
             contactType: 'customer support',
             availableLanguage: 'English',
-            areaServed: 'GB',
+            areaServed: 'US',
           },
         ],
       },
@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
         url: SITE_CONFIG.domain,
         name: `${SITE_CONFIG.brandName} | ${SITE_CONFIG.serviceName}`,
         description:
-          'Televo IPTV UK - Premium IPTV subscription and streaming service in the United Kingdom.',
+          'Televo IPTV USA - Premium IPTV subscription and streaming service in the United States.',
         publisher: {
           '@id': `${SITE_CONFIG.domain}/#organization`,
         },
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en-GB">
+    <html lang="en-US">
       <head>
         <link
           rel="preload"
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body className="bg-white text-[#2b3340] antialiased selection:bg-[#0A2E66] selection:text-white min-h-screen flex flex-col">
+      <body className="bg-white text-[#2b3340] antialiased selection:bg-[#0A1E3F] selection:text-white min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

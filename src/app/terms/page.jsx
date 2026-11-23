@@ -3,8 +3,9 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { SITE_CONFIG } from '../../data/config';
 
 export const metadata = {
-  title: 'Terms of Service | Televo IPTV UK',
-  description: 'Terms of service and subscription terms for Televo IPTV in the United Kingdom.',
+  title: 'Terms of Service | Televo IPTV USA',
+  description:
+    'Terms of service and subscription conditions for Televo IPTV streaming services in the United States.',
   alternates: {
     canonical: '/terms',
   },
@@ -19,16 +20,16 @@ export default function TermsPage() {
         <Breadcrumbs items={breadcrumbsList} />
 
         <div className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-black text-[#0A2E66]">Terms of Service</h1>
-          <div className="uk-underline !mx-0"></div>
-          <p className="text-xs text-slate-500 mt-2">Last Updated: January 2026</p>
+          <h1 className="text-3xl sm:text-4xl font-black text-[#0A1E3F]">Terms of Service</h1>
+          <div className="us-underline !mx-0"></div>
+          <p className="text-xs text-slate-500 mt-2">Last Updated: 2026</p>
         </div>
 
         <div className="space-y-6 text-sm text-slate-700 leading-relaxed">
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">1. Agreement to Terms</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">1. Agreement to Terms</h2>
             <p>
-              By accessing the website <strong>televoiptvs.uk</strong> or purchasing a digital subscription from <strong>Televo IPTV</strong> on our{' '}
+              By accessing the website <strong>www.televoiptv.us</strong> or purchasing a digital subscription from <strong>Televo IPTV</strong> on our{' '}
               <Link href="/subscription" className="text-[#0854c4] font-semibold underline">
                 subscription plans page
               </Link>
@@ -37,7 +38,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">2. Digital Subscription Delivery</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">2. Digital Subscription Delivery</h2>
             <p>
               Televo IPTV provides digital streaming access credentials (Server URL, Xtream Codes credentials, and M3U playlists). Connection details are delivered electronically via WhatsApp or email upon successful payment, and configuration steps are detailed in our{' '}
               <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline">
@@ -48,7 +49,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">3. Permitted Device Connections</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">3. Permitted Device Connections</h2>
             <p>
               Standard subscription packages permit 1 active concurrent connection. Multi-screen family subscriptions permit the exact number of concurrent streams specified at purchase (2, 3, or 4 screens), detailed on our{' '}
               <Link href="/pricing" className="text-[#0854c4] font-semibold underline">
@@ -59,7 +60,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">4. Technical Requirements</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">4. Technical Requirements</h2>
             <p>
               Subscribers are responsible for ensuring they possess compatible streaming hardware and an internet connection with adequate download bandwidth (minimum 15-25 Mbps recommended for 4K Ultra HD playback). Customers are protected under our{' '}
               <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline">
@@ -70,9 +71,9 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">5. Governing Law</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">5. Governing Law</h2>
             <p>
-              These terms are governed by the laws applicable in the United Kingdom. Inquiries regarding these terms can be directed via our{' '}
+              These terms are governed by applicable laws in the United States. Inquiries regarding these terms can be directed via our{' '}
               <Link href="/contact" className="text-[#0854c4] underline font-semibold">
                 contact support page
               </Link>{' '}

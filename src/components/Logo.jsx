@@ -24,7 +24,7 @@ export default function Logo({ size = 'default', showLink = true, variant = 'dar
     large: 'text-sm px-2.5 py-1',
   };
 
-  const textColor = variant === 'light' ? 'text-white' : 'text-[#0A2E66]';
+  const textColor = variant === 'light' ? 'text-white' : 'text-[#0A1E3F]';
 
   const handleClick = (e) => {
     if (onClick) {
@@ -44,41 +44,64 @@ export default function Logo({ size = 'default', showLink = true, variant = 'dar
 
   const content = (
     <div className="flex items-center gap-2.5 group select-none">
-      {/* Official United Kingdom (Union Jack) Flag Icon */}
+      {/* Official United States (Stars and Stripes) Flag Icon */}
       <div
-        className={`relative ${iconSizes[size]} rounded-xl overflow-hidden border border-blue-400/40 shadow-md shadow-blue-900/25 group-hover:scale-105 transition-transform duration-200 shrink-0 flex items-center justify-center bg-[#012169]`}
-        title="Televo IPTV - United Kingdom"
+        className={`relative ${iconSizes[size]} rounded-xl overflow-hidden border border-blue-400/40 shadow-md shadow-blue-900/25 group-hover:scale-105 transition-transform duration-200 shrink-0 flex items-center justify-center bg-[#002868]`}
+        title="Televo IPTV - United States"
       >
         <svg
           viewBox="0 0 60 40"
           className="w-full h-full object-cover"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Blue background field */}
-          <rect width="60" height="40" fill="#012169" />
+          <defs>
+            <g id="logo-star">
+              <polygon fill="#FFFFFF" points="0,-1.2 0.35,-0.37 1.2,-0.37 0.52,0.13 0.77,0.96 0,0.48 -0.77,0.96 -0.52,0.13 -1.2,-0.37 -0.35,-0.37"/>
+            </g>
+          </defs>
 
-          {/* White diagonal saltire (St Andrew) */}
-          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#FFFFFF" strokeWidth="8" />
+          {/* 13 Stripes */}
+          <rect width="60" height="40" fill="#B22234"/>
+          <rect y="3.077" width="60" height="3.077" fill="#FFFFFF"/>
+          <rect y="9.231" width="60" height="3.077" fill="#FFFFFF"/>
+          <rect y="15.385" width="60" height="3.077" fill="#FFFFFF"/>
+          <rect y="21.538" width="60" height="3.077" fill="#FFFFFF"/>
+          <rect y="27.692" width="60" height="3.077" fill="#FFFFFF"/>
+          <rect y="33.846" width="60" height="3.077" fill="#FFFFFF"/>
 
-          {/* Red diagonal saltire (St Patrick) */}
-          <path
-            d="M0,0 L27,18 M33,22 L60,40 M60,0 L33,18 M27,22 L0,40"
-            stroke="#C8102E"
-            strokeWidth="2.7"
-          />
+          {/* Blue Canton (covering top 7 stripes) */}
+          <rect width="25" height="21.538" fill="#002868"/>
 
-          {/* White central cross (St George wide border) */}
-          <path d="M30,0 V40 M0,20 H60" stroke="#FFFFFF" strokeWidth="13" />
+          {/* Clean Star Constellation */}
+          <use href="#logo-star" x="3.5" y="3.5"/>
+          <use href="#logo-star" x="9" y="3.5"/>
+          <use href="#logo-star" x="14.5" y="3.5"/>
+          <use href="#logo-star" x="20" y="3.5"/>
 
-          {/* Red central cross (St George) */}
-          <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="7.5" />
+          <use href="#logo-star" x="6.25" y="7"/>
+          <use href="#logo-star" x="11.75" y="7"/>
+          <use href="#logo-star" x="17.25" y="7"/>
+
+          <use href="#logo-star" x="3.5" y="10.5"/>
+          <use href="#logo-star" x="9" y="10.5"/>
+          <use href="#logo-star" x="14.5" y="10.5"/>
+          <use href="#logo-star" x="20" y="10.5"/>
+
+          <use href="#logo-star" x="6.25" y="14"/>
+          <use href="#logo-star" x="11.75" y="14"/>
+          <use href="#logo-star" x="17.25" y="14"/>
+
+          <use href="#logo-star" x="3.5" y="17.5"/>
+          <use href="#logo-star" x="9" y="17.5"/>
+          <use href="#logo-star" x="14.5" y="17.5"/>
+          <use href="#logo-star" x="20" y="17.5"/>
 
           {/* Inner subtle border for crisp contrast */}
           <rect
             width="60"
             height="40"
             fill="none"
-            stroke="rgba(255,255,255,0.25)"
+            stroke="rgba(255,255,255,0.3)"
             strokeWidth="1.5"
           />
         </svg>
@@ -90,7 +113,7 @@ export default function Logo({ size = 'default', showLink = true, variant = 'dar
           TELEVO
         </span>
         <span
-          className={`font-extrabold uppercase rounded-md bg-[#C8102E] text-white shadow-sm ${badgeSizes[size]} tracking-wider`}
+          className={`font-extrabold uppercase rounded-md bg-[#B22234] text-white shadow-sm ${badgeSizes[size]} tracking-wider`}
         >
           IPTV
         </span>
@@ -105,7 +128,7 @@ export default function Logo({ size = 'default', showLink = true, variant = 'dar
         scroll={true}
         onClick={handleClick}
         className="inline-block cursor-pointer"
-        aria-label="Televo IPTV - Home"
+        aria-label="Televo IPTV USA - Home"
       >
         {content}
       </Link>

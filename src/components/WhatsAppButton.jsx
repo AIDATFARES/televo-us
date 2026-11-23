@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       {!dismissed && (
         <div className="hidden sm:flex items-center gap-2 bg-slate-900 border border-slate-700/80 text-white text-xs px-3.5 py-2 rounded-xl shadow-xl shadow-black/40 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="font-semibold">UK Support Online</span>
+          <span className="font-semibold">24/7 US Support Online</span>
           <button
             onClick={() => setDismissed(true)}
             className="text-slate-200 hover:text-white ml-1 p-0.5"
@@ -29,7 +29,7 @@ export default function WhatsAppButton() {
         href={SITE_CONFIG.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Televo IPTV UK on WhatsApp"
+        aria-label="Chat with Televo IPTV USA on WhatsApp"
         className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:scale-105 active:scale-95 transition-all duration-200 relative group"
       >
         <MessageSquare className="w-7 h-7 fill-white" />

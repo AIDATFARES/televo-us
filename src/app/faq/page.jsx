@@ -52,24 +52,24 @@ export default function FAQPage() {
 
         {/* Hero Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A2E66] text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A1E3F] text-xs font-semibold mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
-            UK Help &amp; Support Resources
+            US Help &amp; Support Resources
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#0A2E66] tracking-tight">
-            Televo IPTV UK — Frequently Asked Questions
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0A1E3F] tracking-tight">
+            Televo IPTV USA — Frequently Asked Questions
           </h1>
-          <div className="uk-underline"></div>
+          <div className="us-underline"></div>
           <p className="text-slate-600 mt-3 text-base">
             Find authoritative answers to all your questions about{' '}
-            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               Televo IPTV subscriptions
             </Link>
             ,{' '}
-            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               supported streaming applications
             </Link>
-            , British broadband optimization, and rapid 5–15 minute activation.
+            , US broadband optimization, and rapid 5–15 minute activation.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function FAQPage() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeCategory === cat
-                  ? 'bg-[#0A2E66] text-white shadow-md'
+                  ? 'bg-[#0A1E3F] text-white shadow-md'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
@@ -104,50 +104,37 @@ export default function FAQPage() {
 
         {/* Accordions */}
         <div className="space-y-8 mb-16">
-          {filteredCategories.length === 0 ? (
-            <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-200">
-              <p className="text-slate-600 text-sm">
-                No matching questions found for "{searchQuery}".
-              </p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setActiveCategory('All');
-                }}
-                className="mt-3 text-xs font-bold text-[#0854c4] underline underline-offset-2 hover:text-[#0A2E66]"
-              >
-                Reset search filters
-              </button>
-            </div>
-          ) : (
-            filteredCategories.map((group, groupIndex) => (
-              <div key={group.category} className="space-y-3">
-                <h2 className="font-bold text-[#0854c4] tracking-wide uppercase text-xs mb-2">
-                  {group.category}
-                </h2>
-                {group.items.map((item, itemIndex) => {
-                  const itemKey = `${groupIndex}-${itemIndex}`;
-                  const isOpen = !!openItems[itemKey];
+          {filteredCategories.map((cat, catIdx) => (
+            <div key={cat.category} className="space-y-3">
+              <h2 className="text-lg font-black text-[#0A1E3F] border-b border-slate-200 pb-2">
+                {cat.category}
+              </h2>
+
+              <div className="space-y-3">
+                {cat.items.map((item, itemIdx) => {
+                  const key = `${catIdx}-${itemIdx}`;
+                  const isOpen = !!openItems[key];
 
                   return (
                     <div
-                      key={itemIndex}
-                      className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden transition-all"
+                      key={itemIdx}
+                      className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm"
                     >
                       <button
-                        onClick={() => toggleItem(itemKey)}
-                        className="w-full text-left p-5 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0A2E66] hover:text-blue-600"
-                        aria-expanded={isOpen}
+                        type="button"
+                        onClick={() => toggleItem(key)}
+                        className="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0A1E3F] flex items-center justify-between gap-4 hover:bg-slate-50 transition-colors"
                       >
                         <span>{item.question}</span>
                         <ChevronDown
-                          className={`w-5 h-5 text-[#0A2E66] transition-transform duration-200 shrink-0 ${
+                          className={`w-5 h-5 text-[#0A1E3F] shrink-0 transition-transform duration-200 ${
                             isOpen ? 'rotate-180' : ''
                           }`}
                         />
                       </button>
+
                       {isOpen && (
-                        <div className="px-5 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                        <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
                           {item.answer}
                         </div>
                       )}
@@ -155,43 +142,25 @@ export default function FAQPage() {
                   );
                 })}
               </div>
-            ))
-          )}
+            </div>
+          ))}
         </div>
 
-        {/* Support Callout Box */}
-        <div className="p-8 rounded-2xl bg-[#0A2E66] text-white text-center">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
-            Still Have Questions About Televo IPTV?
-          </h2>
-          <p className="text-sm text-blue-100 max-w-md mx-auto mb-6">
-            Our dedicated UK support team is available 7 days a week via WhatsApp to guide you through{' '}
-            <Link href="/pricing" className="text-white font-semibold underline hover:text-cyan-200">
-              plan selection
-            </Link>
-            , playlist setup in our{' '}
-            <Link href="/guide-installation" className="text-white font-semibold underline hover:text-cyan-200">
-              installation centre
-            </Link>
-            , and device troubleshooting.
+        {/* Still Have Questions Box */}
+        <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 text-center">
+          <h2 className="text-xl font-black text-[#0A1E3F] mb-2">Still Have Questions?</h2>
+          <p className="text-xs text-slate-600 max-w-md mx-auto mb-6">
+            Our 24/7 technical team is available on WhatsApp to answer any questions about compatible apps, speed tests, or subscription details.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={SITE_CONFIG.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 shadow-lg shadow-emerald-600/30 transition-all"
-            >
-              <MessageSquare className="w-4 h-4" />
-              Chat on WhatsApp
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-[#0A2E66] bg-white hover:bg-slate-100 transition-all"
-            >
-              Contact Page
-            </Link>
-          </div>
+          <a
+            href={SITE_CONFIG.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-md transition-all"
+          >
+            <MessageSquare className="w-4 h-4" />
+            Chat with Customer Care
+          </a>
         </div>
       </div>
     </div>

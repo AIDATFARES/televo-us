@@ -11,9 +11,9 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { SUPPORTED_DEVICES, SITE_CONFIG } from '../../data/config';
 
 export const metadata = {
-  title: 'Televo IPTV Installation Guide | UK Device Setup Centre',
+  title: 'Televo IPTV Installation Guide | Setup Fire Stick, Smart TV & Android',
   description:
-    'Complete setup guides for Televo IPTV in the UK. Step-by-step installation tutorials for Samsung Smart TV, LG TV, Amazon Fire Stick, Android TV, Apple TV, iOS, and PC.',
+    'Complete setup guides for Televo IPTV in the USA. Step-by-step installation tutorials for Samsung Smart TV, LG TV, Amazon Fire Stick, Android TV, Apple TV, iOS, and PC in under 5 minutes.',
   alternates: {
     canonical: '/guide-installation',
   },
@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function InstallationHubPage() {
   const breadcrumbsList = [
-    { name: 'Installation Centre', path: '/guide-installation' },
+    { name: 'Installation Center', path: '/guide-installation' },
   ];
 
   return (
@@ -31,161 +31,103 @@ export default function InstallationHubPage() {
 
         {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A2E66] text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A1E3F] text-xs font-semibold mb-4">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Updated for 2026 • Beginner-Friendly Setup 🇬🇧
+            Updated for 2026 • Beginner-Friendly Setup 🇺🇸
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#0A2E66] tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0A1E3F] tracking-tight">
             Televo IPTV Device Setup &amp; Installation Guides
           </h1>
-          <div className="uk-underline"></div>
+          <div className="us-underline"></div>
           <p className="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
             Set up your{' '}
-            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               Televo IPTV subscription
             </Link>{' '}
-            in under 5 minutes. Browse our step-by-step UK installation tutorials for{' '}
-            <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            in under 5 minutes. Browse our step-by-step US installation tutorials for{' '}
+            <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               Amazon Fire Stick
             </Link>
             ,{' '}
-            <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               Samsung Smart TV
             </Link>
             ,{' '}
-            <Link href="/guide-installation/lg-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/guide-installation/lg-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               LG webOS
             </Link>
-            , Android TV, Apple TV, iOS, and PC with instant M3U and Xtream Codes API integration.
+            , Apple TV, Android TV, and more.
           </p>
         </div>
 
-        {/* Device Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {SUPPORTED_DEVICES.map((device) => (
+        {/* Device Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {SUPPORTED_DEVICES.map((dev) => (
             <Link
-              key={device.slug}
-              href={`/guide-installation/${device.slug}`}
-              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-[#0854c4] hover:shadow-md transition-all flex flex-col justify-between group hover:-translate-y-1"
+              key={dev.slug}
+              href={`/guide-installation/${dev.slug}`}
+              className="group p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold text-[#0A2E66] bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-100">
-                    {device.category}
+                  <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">
+                    {dev.category}
                   </span>
-                  <span className="text-xs text-slate-500">Avg setup: {device.setupTime}</span>
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
+                    ⏱ {dev.setupTime}
+                  </span>
                 </div>
-                <h2 className="text-xl font-black text-[#0A2E66] group-hover:text-[#0854c4] transition-colors">
-                  {device.name}
-                </h2>
+                <h3 className="text-lg font-black text-[#0A1E3F] group-hover:text-blue-600 transition-colors">
+                  {dev.name}
+                </h3>
                 <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                  {device.description}
+                  {dev.description}
                 </p>
-
-                {/* Recommended Apps */}
-                <div className="mt-4 pt-3 border-t border-slate-100">
-                  <span className="text-[11px] text-slate-500 font-bold block mb-1">
-                    Recommended apps:
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {device.apps.map((app, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11px] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium"
-                      >
-                        {app}
-                      </span>
-                    ))}
-                  </div>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {dev.apps.map((app) => (
+                    <span
+                      key={app}
+                      className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 text-slate-700"
+                    >
+                      {app}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#0A2E66] group-hover:text-[#0854c4]">
-                <span>Open {device.name} Guide</span>
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#0854c4] group-hover:text-blue-800">
+                <span>View Setup Tutorial</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Universal Xtream Codes vs M3U Section */}
-        <div className="p-8 lg:p-10 rounded-2xl bg-[#0A2E66] text-white mb-16">
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Understanding Your Televo IPTV Connection Details
+        {/* Global Setup Guidance Card */}
+        <div className="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-slate-200">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0A1E3F]">
+              Need Assistance Setting Up Your Device?
             </h2>
-            <p className="text-blue-100 text-sm mt-2">
-              Once your{' '}
-              <Link href="/subscription" className="text-cyan-300 font-semibold underline hover:text-white">
-                Televo IPTV subscription
-              </Link>{' '}
-              is activated, you will receive two flexible connection options. Both grant full, unrestricted access to 50,000+ live TV channels and 200,000+ VOD movies and series, fully backed by our{' '}
-              <Link href="/refund-policy" className="text-cyan-300 font-semibold underline hover:text-white">
-                7-day guarantee
-              </Link>
-              .
+            <div className="us-underline"></div>
+            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+              Our 24/7 technical team is available on WhatsApp to walk you through playlist URLs, M3U configurations, and app installations for zero-stress activation.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl bg-white/10 border border-white/20">
-              <div className="flex items-center gap-2.5 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-500 text-white font-black flex items-center justify-center text-sm">
-                  1
-                </div>
-                <h3 className="font-bold text-white text-base">Xtream Codes API (Recommended)</h3>
-              </div>
-              <p className="text-xs text-blue-100 leading-relaxed mb-4">
-                The most user-friendly format for Smart TVs and player apps like IPTV Smarters Pro and TiviMate. If you encounter any difficulties, reach out to our{' '}
-                <Link href="/contact" className="text-cyan-300 font-semibold underline hover:text-white">
-                  UK support team
-                </Link>
-                . Simply enter three pieces of information:
-              </p>
-              <ul className="space-y-1.5 text-xs text-white">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Server URL:</strong> Unique UK server endpoint</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Username:</strong> Your personal account identifier</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Password:</strong> Your secure credentials</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="p-6 rounded-xl bg-white/10 border border-white/20">
-              <div className="flex items-center gap-2.5 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-500 text-white font-black flex items-center justify-center text-sm">
-                  2
-                </div>
-                <h3 className="font-bold text-white text-base">M3U Playlist URL</h3>
-              </div>
-              <p className="text-xs text-blue-100 leading-relaxed mb-4">
-                A single web link containing the complete channel catalog and electronic program guide index. Check our{' '}
-                <Link href="/faq" className="text-cyan-300 font-semibold underline hover:text-white">
-                  EPG guide FAQ
-                </Link>{' '}
-                for details on player synchronization. Ideal for players that accept direct URL import:
-              </p>
-              <ul className="space-y-1.5 text-xs text-white">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Single URL:</strong> Paste directly into VLC or SIPTV</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Auto-Sync:</strong> Automatically updates when channels are added</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span><strong>Integrated EPG:</strong> Programme guide feeds load automatically</span>
-                </li>
-              </ul>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={SITE_CONFIG.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-500 shadow-md transition-all flex items-center justify-center gap-2"
+              >
+                💬 Chat with Setup Specialist
+              </a>
+              <Link
+                href="/subscription"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-sm text-[#0A1E3F] bg-white border border-slate-300 hover:bg-slate-100 transition-all"
+              >
+                Explore Subscription Plans
+              </Link>
             </div>
           </div>
         </div>

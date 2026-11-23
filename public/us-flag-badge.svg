@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="60" height="30">
+  <defs>
+    <clipPath id="usRound">
+      <rect width="60" height="30" rx="5" ry="5"/>
+    </clipPath>
+    <g id="star">
+      <polygon fill="#FFFFFF" points="0,-1.05 0.32,-0.32 1.05,-0.32 0.46,0.11 0.68,0.85 0,0.42 -0.68,0.85 -0.46,0.11 -1.05,-0.32 -0.32,-0.32"/>
+    </g>
+  </defs>
+
+  <g clip-path="url(#usRound)">
+    <!-- 13 Stripes -->
+    <rect width="60" height="30" fill="#B22234"/>
+    <rect y="2.308" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="6.923" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="11.538" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="16.154" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="20.769" width="60" height="2.308" fill="#FFFFFF"/>
+    <rect y="25.385" width="60" height="2.308" fill="#FFFFFF"/>
+
+    <!-- Blue Canton (covering 7 stripes) -->
+    <rect width="25" height="16.154" fill="#002868"/>
+
+    <!-- Stylized Stars Pattern inside Canton -->
+    <!-- Row 1 -->
+    <use href="#star" x="3" y="2.5" />
+    <use href="#star" x="7.5" y="2.5" />
+    <use href="#star" x="12" y="2.5" />
+    <use href="#star" x="16.5" y="2.5" />
+    <use href="#star" x="21" y="2.5" />
+    <!-- Row 2 -->
+    <use href="#star" x="5.25" y="5.2" />
+    <use href="#star" x="9.75" y="5.2" />
+    <use href="#star" x="14.25" y="5.2" />
+    <use href="#star" x="18.75" y="5.2" />
+    <!-- Row 3 -->
+    <use href="#star" x="3" y="8" />
+    <use href="#star" x="7.5" y="8" />
+    <use href="#star" x="12" y="8" />
+    <use href="#star" x="16.5" y="8" />
+    <use href="#star" x="21" y="8" />
+    <!-- Row 4 -->
+    <use href="#star" x="5.25" y="10.8" />
+    <use href="#star" x="9.75" y="10.8" />
+    <use href="#star" x="14.25" y="10.8" />
+    <use href="#star" x="18.75" y="10.8" />
+    <!-- Row 5 -->
+    <use href="#star" x="3" y="13.5" />
+    <use href="#star" x="7.5" y="13.5" />
+    <use href="#star" x="12" y="13.5" />
+    <use href="#star" x="16.5" y="13.5" />
+    <use href="#star" x="21" y="13.5" />
+  </g>
+
+  <!-- Crisp badge border -->
+  <rect x="0.5" y="0.5" width="59" height="29" rx="4.5" fill="none" stroke="rgba(10,30,63,0.3)" stroke-width="1"/>
+</svg>

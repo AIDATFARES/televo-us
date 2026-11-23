@@ -16,12 +16,12 @@ export default function Footer() {
               <Logo size="default" variant="dark" />
             </div>
             <p className="aii-about-text">
-              <strong>Televo IPTV</strong> is the UK’s premier IPTV streaming provider, delivering buffer-free 4K live sports, 50,000+ international television channels, and 200,000+ on-demand movies through our{' '}
-              <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              <strong>Televo IPTV</strong> is the United States’ premier IPTV streaming provider, delivering buffer-free 4K live sports, 50,000+ international television channels, and 200,000+ on-demand movies through our{' '}
+              <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 IPTV subscription plans
               </Link>{' '}
               with instant digital activation and step-by-step{' '}
-              <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 device setup guides
               </Link>
               .
@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="aii-trust-badges">
               <span className="aii-mini-badge">
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
-                UK Server CDN
+                US Server CDN
               </span>
               <span className="aii-mini-badge">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
@@ -71,9 +71,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Dedicated UK Support & Secure Payments */}
+          {/* Column 4: Dedicated US Support & Secure Payments */}
           <div>
-            <h3 className="aii-title">UK Customer Care</h3>
+            <h3 className="aii-title">US Customer Care</h3>
             <ul className="aii-contact">
               <li className="flex items-start gap-2">
                 <MessageSquare className="w-4 h-4 text-emerald-600 shrink-0 mt-1" />
@@ -106,8 +106,8 @@ export default function Footer() {
                 <span>Encrypted 256-bit Checkout</span>
               </div>
               <p className="text-[11px] text-slate-700 m-0 leading-tight">
-                Accepts major UK Debit &amp; Credit Cards, PayPal, and Bank Transfer with instant order verification, covered by our{' '}
-                <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                Accepts major US Debit &amp; Credit Cards, PayPal, and Apple Pay with instant order verification, covered by our{' '}
+                <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   7-day refund guarantee
                 </Link>
                 .
@@ -116,13 +116,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* UK Trust Badge Strip */}
+        {/* US Trust Badge Strip */}
         <div className="aii-social">
           <div className="aii-badges">
-            <span className="aii-chip">🇬🇧 Optimized for BT &amp; Virgin Media</span>
+            <span className="aii-chip">🇺🇸 Optimized for Xfinity, AT&amp;T &amp; Spectrum</span>
             <span className="aii-chip">⚡ 99.9% Stream Stability</span>
-            <span className="aii-chip">🔒 No Direct Debit Required</span>
-            <span className="aii-chip">💬 British English Support</span>
+            <span className="aii-chip">🔒 Zero Equipment Rentals</span>
+            <span className="aii-chip">💬 24/7 Dedicated Support</span>
           </div>
         </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="aii-bottom">
           <div>
-            © {currentYear} {SITE_CONFIG.brandName}. All rights reserved. Registered service in the United Kingdom.
+            © {currentYear} {SITE_CONFIG.brandName}. All rights reserved. Registered service in the United States.
           </div>
           <div className="aii-legal-inline">
             <Link href="/privacy-policy">Privacy Policy</Link>
@@ -145,4 +145,3 @@ export default function Footer() {
     </footer>
   );
 }
-

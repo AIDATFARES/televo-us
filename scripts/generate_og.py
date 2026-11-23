@@ -3,15 +3,44 @@ import base64
 from playwright.sync_api import sync_playwright
 from PIL import Image
 
-# Read image for the TV screen preview (Live sports & UK channels)
-sports_path = os.path.abspath('public/tv-strip/tv-preview-12.webp')
+# Read image for the TV screen preview (Live sports & channels)
+sports_path = os.path.abspath('public/tv-strip/tv-preview-4.webp')
 with open(sports_path, 'rb') as f:
     sports_b64 = base64.b64encode(f.read()).decode('utf-8')
 
-# Read movies preview for floating VOD pill
-movies_path = os.path.abspath('public/tv-strip/tv-preview-1.webp')
-with open(movies_path, 'rb') as f:
-    movies_b64 = base64.b64encode(f.read()).decode('utf-8')
+us_flag_svg = '''<svg viewBox="0 0 60 38" width="100%" height="100%">
+  <defs>
+    <g id="star">
+      <polygon fill="#FFFFFF" points="0,-1.05 0.32,-0.32 1.05,-0.32 0.46,0.11 0.68,0.85 0,0.42 -0.68,0.85 -0.46,0.11 -1.05,-0.32 -0.32,-0.32"/>
+    </g>
+  </defs>
+  <rect width="60" height="38" fill="#B22234"/>
+  <rect y="2.92" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect y="8.77" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect y="14.62" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect y="20.46" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect y="26.31" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect y="32.15" width="60" height="2.92" fill="#FFFFFF"/>
+  <rect width="25" height="20.46" fill="#002868"/>
+  <use href="#star" x="4" y="3.5" />
+  <use href="#star" x="9.5" y="3.5" />
+  <use href="#star" x="15" y="3.5" />
+  <use href="#star" x="20.5" y="3.5" />
+  <use href="#star" x="6.75" y="7" />
+  <use href="#star" x="12.25" y="7" />
+  <use href="#star" x="17.75" y="7" />
+  <use href="#star" x="4" y="10.5" />
+  <use href="#star" x="9.5" y="10.5" />
+  <use href="#star" x="15" y="10.5" />
+  <use href="#star" x="20.5" y="10.5" />
+  <use href="#star" x="6.75" y="14" />
+  <use href="#star" x="12.25" y="14" />
+  <use href="#star" x="17.75" y="14" />
+  <use href="#star" x="4" y="17.5" />
+  <use href="#star" x="9.5" y="17.5" />
+  <use href="#star" x="15" y="17.5" />
+  <use href="#star" x="20.5" y="17.5" />
+</svg>'''
 
 html_content = f'''<!DOCTYPE html>
 <html lang="en">
@@ -42,7 +71,7 @@ html_content = f'''<!DOCTYPE html>
     inset: 0;
     background: 
       radial-gradient(circle at 82% 28%, rgba(29, 122, 242, 0.38) 0%, rgba(29, 122, 242, 0.08) 50%, transparent 70%),
-      radial-gradient(circle at 14% 88%, rgba(200, 16, 46, 0.24) 0%, rgba(200, 16, 46, 0.04) 40%, transparent 65%),
+      radial-gradient(circle at 14% 88%, rgba(178, 34, 52, 0.25) 0%, rgba(178, 34, 52, 0.04) 40%, transparent 65%),
       radial-gradient(circle at 48% -10%, rgba(56, 189, 248, 0.22) 0%, transparent 50%),
       linear-gradient(135deg, #020610 0%, #061329 45%, #040d1c 100%);
     z-index: 1;
@@ -77,7 +106,7 @@ html_content = f'''<!DOCTYPE html>
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(200, 16, 46, 0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(178, 34, 52, 0.22) 0%, transparent 70%);
     bottom: -100px;
     left: -60px;
     filter: blur(70px);
@@ -151,10 +180,10 @@ html_content = f'''<!DOCTYPE html>
   .flag-box {{
     width: 56px;
     height: 38px;
-    border-radius: 11px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 18px rgba(10, 30, 80, 0.7), 0 0 0 1.5px rgba(96, 165, 250, 0.6);
-    background: #012169;
+    background: #002868;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -177,11 +206,11 @@ html_content = f'''<!DOCTYPE html>
     font-weight: 900;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    background: linear-gradient(135deg, #B22234 0%, #991B1B 100%);
     color: #FFFFFF;
     padding: 5px 14px;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(178, 34, 52, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }}
 
   /* Hero Headline */
@@ -441,7 +470,7 @@ html_content = f'''<!DOCTYPE html>
     color: #F8FAFC;
   }}
 
-  /* Floating Badge Left-Mid (Zero overlap with caption, live tags, or chips) */
+  /* Floating Badge Left-Mid */
   .floating-badge-2 {{
     position: absolute;
     top: 75px;
@@ -528,20 +557,13 @@ html_content = f'''<!DOCTYPE html>
         <!-- Trust Pill -->
         <div class="trust-pill">
           <span class="pulse-dot"></span>
-          <span class="trust-pill-text">United Kingdom's #1 Rated IPTV Service</span>
+          <span class="trust-pill-text">United States' #1 Rated IPTV Service</span>
         </div>
 
-        <!-- Brand Name & Union Jack Flag -->
+        <!-- Brand Name & US Flag -->
         <div class="brand-row">
           <div class="flag-box">
-            <!-- Precise Union Jack SVG -->
-            <svg viewBox="0 0 60 40" width="100%" height="100%">
-              <rect width="60" height="40" fill="#012169" />
-              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#FFFFFF" stroke-width="8" />
-              <path d="M0,0 L27,18 M33,22 L60,40 M60,0 L33,18 M27,22 L0,40" stroke="#C8102E" stroke-width="2.7" />
-              <path d="M30,0 V40 M0,20 H60" stroke="#FFFFFF" stroke-width="13" />
-              <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7.5" />
-            </svg>
+            {us_flag_svg}
           </div>
           <div class="brand-name">
             <span>TELEVO</span>
@@ -557,7 +579,7 @@ html_content = f'''<!DOCTYPE html>
 
         <!-- Subheading -->
         <p class="hero-sub">
-          Next-generation UK IPTV streaming with 99.9% anti-freeze stability, instant 5-minute activation, and full 7-day catch-up.
+          Next-generation US IPTV streaming with 99.9% anti-freeze stability, instant 5-minute activation, and full 7-day catch-up.
         </p>
 
         <!-- 2x2 Feature Highlights -->
@@ -577,17 +599,17 @@ html_content = f'''<!DOCTYPE html>
             </div>
           </div>
           <div class="feature-card">
-            <span class="feature-icon">⚽</span>
+            <span class="feature-icon">🏈</span>
             <div class="feature-info">
               <span class="feature-title">Live 4K Sports</span>
-              <span class="feature-desc">Premier League, UCL &amp; PPV</span>
+              <span class="feature-desc">NFL, NBA, MLB &amp; PPV</span>
             </div>
           </div>
           <div class="feature-card">
             <span class="feature-icon">🚀</span>
             <div class="feature-info">
               <span class="feature-title">Anti-Freeze™ CDN</span>
-              <span class="feature-desc">High-Speed UK Network</span>
+              <span class="feature-desc">Low-Latency US Server Network</span>
             </div>
           </div>
         </div>
@@ -600,15 +622,9 @@ html_content = f'''<!DOCTYPE html>
         </div>
         <div class="domain-pill">
           <div style="width: 18px; height: 12px; border-radius: 2px; overflow: hidden; display: inline-flex; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.5);">
-            <svg viewBox="0 0 60 40" width="100%" height="100%">
-              <rect width="60" height="40" fill="#012169" />
-              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#FFFFFF" stroke-width="8" />
-              <path d="M0,0 L27,18 M33,22 L60,40 M60,0 L33,18 M27,22 L0,40" stroke="#C8102E" stroke-width="2.7" />
-              <path d="M30,0 V40 M0,20 H60" stroke="#FFFFFF" stroke-width="13" />
-              <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7.5" />
-            </svg>
+            {us_flag_svg}
           </div>
-          <span>www.televoiptvs.uk</span>
+          <span>www.televoiptv.us</span>
         </div>
       </div>
     </div>
@@ -618,13 +634,13 @@ html_content = f'''<!DOCTYPE html>
       <!-- Floating Badge Top -->
       <div class="floating-badge-1">
         <span>⭐</span>
-        <span class="floating-badge-1-text">Rated 4.9/5 by UK Customers</span>
+        <span class="floating-badge-1-text">Rated 4.9/5 by US Customers</span>
       </div>
 
       <!-- TV Screen Frame -->
       <div class="tv-frame">
         <div class="screen-content">
-          <img src="data:image/webp;base64,{sports_b64}" class="screen-img" alt="Live Premier League and Sports Streaming" />
+          <img src="data:image/webp;base64,{sports_b64}" class="screen-img" alt="Live US Sports Streaming" />
           <div class="screen-overlay"></div>
 
           <!-- Inside TV Tags -->
@@ -639,8 +655,8 @@ html_content = f'''<!DOCTYPE html>
 
           <div class="tv-caption-bar">
             <div>
-              <div class="tv-caption-title">Premier League &amp; UEFA Replay</div>
-              <div class="tv-caption-sub">Ultra-High Bitrate • 0% Buffering</div>
+              <div class="tv-caption-title">NFL Sunday Ticket &amp; Live Sports</div>
+              <div class="tv-caption-sub">Ultra-High Bitrate 60FPS • 0% Buffering</div>
             </div>
             <div class="tv-caption-badge">
               Active Stream
@@ -654,7 +670,7 @@ html_content = f'''<!DOCTYPE html>
         <span class="floating-badge-2-icon">⚡</span>
         <div class="floating-badge-2-text">
           <span class="floating-badge-2-val">99.9% Uptime</span>
-          <span class="floating-badge-2-sub">High-Speed UK Network</span>
+          <span class="floating-badge-2-sub">High-Speed US Network</span>
         </div>
       </div>
 

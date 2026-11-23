@@ -3,8 +3,9 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { SITE_CONFIG } from '../../data/config';
 
 export const metadata = {
-  title: 'Privacy Policy | Televo IPTV UK',
-  description: 'Televo IPTV UK privacy policy. Learn how we handle digital credentials, communications, and customer data with 256-bit SSL encryption.',
+  title: 'Privacy Policy | Televo IPTV USA',
+  description:
+    'Televo IPTV USA privacy policy. Learn how we handle digital credentials, communications, and customer data with 256-bit SSL encryption.',
   alternates: {
     canonical: '/privacy-policy',
   },
@@ -19,16 +20,16 @@ export default function PrivacyPolicyPage() {
         <Breadcrumbs items={breadcrumbsList} />
 
         <div className="mb-10">
-          <h1 className="text-3xl sm:text-4xl font-black text-[#0A2E66]">Privacy Policy</h1>
-          <div className="uk-underline !mx-0"></div>
-          <p className="text-xs text-slate-500 mt-2">Last Updated: January 2026</p>
+          <h1 className="text-3xl sm:text-4xl font-black text-[#0A1E3F]">Privacy Policy</h1>
+          <div className="us-underline !mx-0"></div>
+          <p className="text-xs text-slate-500 mt-2">Last Updated: 2026</p>
         </div>
 
         <div className="space-y-6 text-sm text-slate-700 leading-relaxed">
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">1. Overview &amp; Data Commitment</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">1. Overview &amp; Data Commitment</h2>
             <p>
-              At <strong>Televo IPTV</strong> (operated as Televo IPTV UK), we are committed to respecting and protecting the privacy of our website visitors and subscribers. This policy outlines what information we collect when ordering our{' '}
+              At <strong>Televo IPTV</strong> (operated as Televo IPTV USA), we are committed to respecting and protecting the privacy of our website visitors and subscribers. This policy outlines what information we collect when ordering our{' '}
               <Link href="/subscription" className="text-blue-600 font-semibold underline">
                 IPTV subscriptions
               </Link>
@@ -37,7 +38,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">2. Information We Collect</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">2. Information We Collect</h2>
             <p>
               We only collect data strictly necessary to fulfill your digital subscription order and provide customer support via our{' '}
               <Link href="/contact" className="text-blue-600 font-semibold underline">
@@ -49,15 +50,15 @@ export default function PrivacyPolicyPage() {
               <li>Contact details such as email address and WhatsApp telephone number for credential delivery.</li>
               <li>
                 Streaming hardware device preference (e.g.{' '}
-                <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
-                  Firestick
+                <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
+                  Fire Stick
                 </Link>
                 ,{' '}
-                <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   Smart TV
                 </Link>
-                , Android) to send targeted{' '}
-                <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                , Apple TV, Android) to send targeted{' '}
+                <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   setup guides
                 </Link>
                 .
@@ -67,7 +68,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">3. No Traffic Logs Policy</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">3. No Traffic Logs Policy</h2>
             <p>
               Televo IPTV operates a strict zero-activity logging policy regarding your viewing habits. We do not monitor, store, or log the specific television channels, video streams, or content titles you watch across our{' '}
               <Link href="/about" className="text-blue-600 font-semibold underline">
@@ -78,7 +79,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">4. Data Security</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">4. Data Security</h2>
             <p>
               All communication between your browser and our website is protected by modern 256-bit SSL encryption. Digital connection credentials are communicated securely via encrypted messaging channels, backed by our{' '}
               <Link href="/refund-policy" className="text-blue-600 font-semibold underline">
@@ -89,7 +90,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-[#0A2E66] mb-2">5. Contact Us Regarding Privacy</h2>
+            <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">5. Contact Us Regarding Privacy</h2>
             <p>
               If you have any questions or requests regarding your personal information, reach out through our{' '}
               <Link href="/contact" className="text-blue-600 underline font-semibold">

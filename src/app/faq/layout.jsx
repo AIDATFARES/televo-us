@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Frequently Asked Questions | Televo IPTV UK Help Centre',
+  title: 'IPTV FAQ | Answers to Common Questions About Televo IPTV USA',
   description:
-    'Answers to frequently asked questions about Televo IPTV. Details on channel availability, 4K device setup, VPN requirements, and UK activation.',
+    'Answers to frequently asked questions about Televo IPTV. Details on US channel availability, 4K device setup, VPN requirements, and rapid activation.',
   alternates: {
     canonical: '/faq',
   },
@@ -10,4 +10,3 @@ export const metadata = {
 export default function FAQLayout({ children }) {
   return children;
 }
-

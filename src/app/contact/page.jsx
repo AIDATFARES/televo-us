@@ -36,24 +36,24 @@ export default function ContactPage() {
 
         {/* Hero Title */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A2E66] text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0A1E3F] text-xs font-semibold mb-4">
             <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
-            UK Support Desk • 7 Days a Week
+            US Support Desk • 24/7 Availability 🇺🇸
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#0A2E66] tracking-tight">
-            Contact Televo IPTV UK Support
+          <h1 className="text-3xl sm:text-5xl font-black text-[#0A1E3F] tracking-tight">
+            Contact Televo IPTV USA Support
           </h1>
-          <div className="uk-underline"></div>
+          <div className="us-underline"></div>
           <p className="text-slate-600 mt-3 text-base">
             Have questions about a{' '}
-            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/subscription" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               Televo IPTV subscription
             </Link>
             , need quick assistance configuring your streaming device via our{' '}
-            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+            <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
               setup guides
             </Link>
-            , or want to verify connection details? Our UK customer care team is here to assist 7 days a week.
+            , or want to verify connection details? Our US customer care team is here to assist 24/7.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
               </div>
               <h2 className="text-xl font-bold text-emerald-950 mb-1">WhatsApp Live Chat</h2>
               <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                The most direct way to connect with our UK support team. Request{' '}
+                The most direct way to connect with our US support team. Request{' '}
                 <Link href="/pricing" className="text-emerald-700 font-semibold underline hover:text-emerald-900">
                   subscription plans
                 </Link>
@@ -93,35 +93,36 @@ export default function ContactPage() {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-sm font-bold text-[#0A2E66]">Email Address</h3>
+                  <h3 className="text-sm font-bold text-[#0A1E3F]">Email Address</h3>
                   <a
                     href={`mailto:${SITE_CONFIG.supportEmail}`}
                     className="text-xs text-slate-600 hover:text-blue-600 transition-colors"
                   >
                     {SITE_CONFIG.supportEmail}
                   </a>
+                  <p className="text-[11px] text-slate-500 mt-0.5">Average reply time: under 30 minutes</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-sm font-bold text-[#0A2E66]">Operating Hours (UK Time)</h3>
+                  <h3 className="text-sm font-bold text-[#0A1E3F]">Support Operating Hours</h3>
                   <p className="text-xs text-slate-600">{SITE_CONFIG.openingHours}</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">Average reply within 10-20 minutes</p>
+                  <p className="text-[11px] text-slate-500 mt-0.5">Automated credential delivery runs 24/7/365</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-sm font-bold text-[#0A2E66]">Customer Guarantee</h3>
+                  <h3 className="text-sm font-bold text-[#0A1E3F]">Order Protection</h3>
                   <p className="text-xs text-slate-600">
-                    All new subscriptions include a{' '}
-                    <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                    All subscriptions are covered by our{' '}
+                    <Link href="/refund-policy" className="text-blue-600 font-semibold underline">
                       7-day money-back guarantee
-                    </Link>{' '}
-                    for peace of mind.
+                    </Link>
+                    .
                   </p>
                 </div>
               </div>
@@ -129,47 +130,34 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            {submitted ? (
-              <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-8 h-8" />
-                </div>
-                <h2 className="text-2xl font-bold text-[#0A2E66]">Message Received</h2>
-                <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                  Thank you for reaching out to <strong>Televo IPTV</strong>. A member of our UK support team will respond to your email address ({formData.email}) shortly. In the meantime, explore our{' '}
-                  <Link href="/faq" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
-                    frequently asked questions
-                  </Link>
-                  .
-                </p>
-                <div className="pt-4">
+          <div className="lg:col-span-7">
+            <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+              <h2 className="text-xl font-bold text-[#0A1E3F] mb-1">Send Us a Direct Message</h2>
+              <p className="text-xs text-slate-600 mb-6">
+                Fill out the form below and an agent will reply to your email or WhatsApp number promptly.
+              </p>
+
+              {submitted ? (
+                <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center">
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-emerald-900 mb-1">Message Received!</h3>
+                  <p className="text-xs text-emerald-800 leading-relaxed mb-4">
+                    Thank you for reaching out. Our US support team has received your message and will respond shortly.
+                  </p>
                   <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: '', email: '', device: 'Amazon Fire Stick', message: '' });
-                    }}
-                    className="text-xs text-[#0854c4] underline underline-offset-2 hover:text-[#0A2E66] font-bold"
+                    onClick={() => setSubmitted(false)}
+                    className="text-xs font-bold text-emerald-700 underline"
                   >
                     Send another inquiry
                   </button>
                 </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <h2 className="text-xl font-bold text-[#0A2E66] mb-2">Send Us a Direct Message</h2>
-                <p className="text-xs text-slate-500 mb-6">
-                  Fill in your details below or browse our{' '}
-                  <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
-                    device setup guides
-                  </Link>{' '}
-                  for instant troubleshooting steps.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-                      Your Name
+                    <label className="block text-xs font-bold text-[#0A1E3F] mb-1">
+                      Your Full Name
                     </label>
                     <input
                       type="text"
@@ -177,12 +165,12 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. John Smith"
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-blue-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    <label className="block text-xs font-bold text-[#0A1E3F] mb-1">
                       Email Address
                     </label>
                     <input
@@ -190,55 +178,56 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="john@example.co.uk"
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      placeholder="name@example.com"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-blue-500"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-                    Your Streaming Device
-                  </label>
-                  <select
-                    value={formData.device}
-                    onChange={(e) => setFormData({ ...formData, device: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  <div>
+                    <label className="block text-xs font-bold text-[#0A1E3F] mb-1">
+                      Your Streaming Device
+                    </label>
+                    <select
+                      value={formData.device}
+                      onChange={(e) => setFormData({ ...formData, device: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-blue-500 bg-white"
+                    >
+                      <option>Amazon Fire Stick / Fire TV</option>
+                      <option>Samsung Smart TV (Tizen)</option>
+                      <option>LG Smart TV (webOS)</option>
+                      <option>Android TV / Google TV</option>
+                      <option>Apple TV (tvOS)</option>
+                      <option>iPhone / iPad (iOS)</option>
+                      <option>Android Smartphone / Tablet</option>
+                      <option>Windows PC / Mac</option>
+                      <option>Other / Not Listed</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-[#0A1E3F] mb-1">
+                      How Can We Help?
+                    </label>
+                    <textarea
+                      rows={4}
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Describe your question, device issue, or subscription requirement..."
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-blue-500"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full py-3.5 px-6 rounded-xl font-bold text-xs text-white bg-[#0A1E3F] hover:bg-[#123366] shadow-md transition-all flex items-center justify-center gap-2"
                   >
-                    <option value="Amazon Fire Stick">Amazon Fire Stick / Fire TV</option>
-                    <option value="Samsung Smart TV">Samsung Smart TV (Tizen)</option>
-                    <option value="LG Smart TV">LG Smart TV (webOS)</option>
-                    <option value="Android TV / Box">Android TV / Google TV</option>
-                    <option value="Apple TV">Apple TV (tvOS)</option>
-                    <option value="iPhone / iPad">iPhone / iPad (iOS)</option>
-                    <option value="Windows PC / Mac">Windows PC / Mac</option>
-                    <option value="Other / General">Other / General Question</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-                    How Can We Help You?
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Provide details about your query, compatible application, or subscription question..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-[#0A2E66] hover:bg-[#113E86] shadow-md transition-all flex items-center justify-center gap-2"
-                >
-                  <Send className="w-4 h-4" />
-                  Send Inquiry to Televo Support
-                </button>
-              </form>
-            )}
+                    <Send className="w-4 h-4" />
+                    Submit Support Inquiry
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -16,66 +16,66 @@ export default function PricingSection({ title, subtitle }) {
       id: '3m',
       duration: '3 Months',
       months: 3,
-      basePrice: 24.99,
-      baseOriginalPrice: 34.99,
+      basePrice: 35.00,
+      baseOriginalPrice: 49.99,
       ctaLabel: 'GET 3 MONTHS PLAN',
       accessLabel: '3 Months Access',
-      badge: 'SAVE 22%',
-      highlight: 'Popular Quarterly IPTV Pass — Just £8.33 / Mo',
-      urgency: '⚡ Active UK Delivery — 5-15 Mins',
+      badge: 'SAVE 30%',
+      highlight: 'Popular Quarterly IPTV Pass — Just $11.66 / Mo',
+      urgency: '⚡ Active US Delivery — 5-15 Mins',
       isPopular: false,
       features: [
-        'Crystal-Clear 4K UHD & Full HD live streams',
-        'Complete 7-day UK electronic programme guide (EPG)',
+        'Crystal-Clear 4K UHD & 60 FPS live sports streams',
+        'Complete 7-day US electronic program guide (EPG)',
         'Over 200,000 VOD movies & complete box sets',
         'Compatible with Fire Stick, Smart TVs, Android & iOS',
         'Anti-Freeze streaming servers with 99.9% uptime',
         '7-day money-back satisfaction guarantee',
-        'Prompt UK customer assistance via WhatsApp',
+        'Prompt 24/7 customer assistance via WhatsApp',
       ],
     },
     {
       id: '6m',
       duration: '6 Months',
       months: 6,
-      basePrice: 39.99,
-      baseOriginalPrice: 54.99,
+      basePrice: 50.00,
+      baseOriginalPrice: 69.99,
       ctaLabel: 'GET 6 MONTHS PLAN',
       accessLabel: '6 Months Access',
-      badge: 'SAVE 44%',
-      highlight: 'Half-Year IPTV Pass — Just £6.66 / Mo',
-      urgency: '⚡ Active UK Delivery — 5-15 Mins',
+      badge: 'SAVE 45%',
+      highlight: 'Half-Year IPTV Pass — Just $8.33 / Mo',
+      urgency: '⚡ Active US Delivery — 5-15 Mins',
       isPopular: false,
       features: [
-        'Crystal-Clear 4K UHD & Full HD live streams',
-        'Complete 7-day UK electronic programme guide (EPG)',
+        'Crystal-Clear 4K UHD & 60 FPS live sports streams',
+        'Complete 7-day US electronic program guide (EPG)',
         'Over 200,000 VOD movies & complete box sets',
         'Compatible with Fire Stick, Smart TVs, Android & iOS',
         'Anti-Freeze streaming servers with 99.9% uptime',
         '7-day money-back satisfaction guarantee',
-        'Prompt UK customer assistance via WhatsApp',
+        'Prompt 24/7 customer assistance via WhatsApp',
       ],
     },
     {
       id: '12m',
       duration: '12 Months',
       months: 12,
-      basePrice: 59.99,
-      baseOriginalPrice: 89.99,
+      basePrice: 70.00,
+      baseOriginalPrice: 99.99,
       ctaLabel: 'GET 1 YEAR PLAN',
       accessLabel: '1 Year Access',
       badge: 'MOST POPULAR',
-      highlight: 'Ultimate Annual IPTV Pass — Just £5.00 / Mo',
-      urgency: '🔥 Most Chosen by UK Households',
+      highlight: 'Ultimate Annual IPTV Pass — Just $5.83 / Mo',
+      urgency: '🔥 Most Chosen by US Households',
       isPopular: true,
       features: [
         '4K Ultra HD & 60 FPS sports streams',
-        'Complete UK & International live channels',
-        'Full 7-day UK EPG programme guide',
+        'Complete US & International live channels',
+        'Full 7-day US EPG program guide',
         'Over 200,000 VOD movies & series updated weekly',
         'Free setup walkthrough via WhatsApp',
         '7-day money-back satisfaction guarantee',
-        'VIP Priority UK customer assistance',
+        'VIP Priority 24/7 customer assistance',
       ],
     },
   ];
@@ -89,13 +89,13 @@ export default function PricingSection({ title, subtitle }) {
   return (
     <section id="aii-pricing" className="py-12 bg-white">
       <div className="wrap">
-        <h2>{title || 'Televo IPTV UK Subscription Plans'}</h2>
-        <div className="uk-underline"></div>
+        <h2>{title || 'Televo IPTV USA Subscription Plans'}</h2>
+        <div className="us-underline"></div>
         <p className="sub">
           {subtitle || (
             <>
-              Prepaid, transparent IPTV pricing in British Pounds (GBP). Enjoy 4K Ultra HD streams, 7-day EPG guides, and contract-free streaming across all your devices, backed by our{' '}
-              <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+              Prepaid, transparent IPTV pricing in US Dollars (USD). Enjoy 4K Ultra HD streams, 7-day EPG guides, and contract-free streaming across all your devices, backed by our{' '}
+              <Link href="/refund-policy" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 7-day money-back guarantee
               </Link>
               .
@@ -112,7 +112,7 @@ export default function PricingSection({ title, subtitle }) {
             <span className="dot"></span> Risk-Free 7-Day Money-Back Guarantee
           </span>
           <span className="trust-pill">
-            <span className="dot"></span> Dedicated British WhatsApp Support
+            <span className="dot"></span> Dedicated 24/7 WhatsApp Support
           </span>
         </div>
 
@@ -167,11 +167,11 @@ export default function PricingSection({ title, subtitle }) {
             {deviceCount === 1 ? (
               <span>
                 Standard individual package for <strong>1 primary device</strong> (
-                <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                <Link href="/guide-installation/samsung-smart-tv" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   Smart TV
                 </Link>
                 ,{' '}
-                <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                <Link href="/guide-installation/firestick" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   Fire Stick
                 </Link>
                 , Mobile, or PC).
@@ -179,7 +179,7 @@ export default function PricingSection({ title, subtitle }) {
             ) : (
               <span>
                 Multi-Screen household package: stream simultaneously across <strong>{deviceCount} different screens</strong> in separate rooms with independent channels, fully supported by our{' '}
-                <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A2E66]">
+                <Link href="/guide-installation" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                   device setup guides
                 </Link>
                 .
@@ -191,19 +191,17 @@ export default function PricingSection({ title, subtitle }) {
         {/* 3 Duration Cards Grid (3 Months, 6 Months, 12 Months) */}
         <div className="grid">
           {basePlans.map((plan) => {
-            // Price calculation strictly according to user rules:
-            // 1 device = basePrice, 2 devices = x2, 3 devices = x3, 4 devices = x4
             const finalPrice = (plan.basePrice * deviceCount).toFixed(2);
             const finalOriginalPrice = (plan.baseOriginalPrice * deviceCount).toFixed(2);
 
             // Monthly equivalent per screen
             const monthlyPerScreen = (plan.basePrice / plan.months).toFixed(2);
             const monthlyEqLabel = deviceCount === 1
-              ? `£${monthlyPerScreen}/mo eq.`
-              : `£${monthlyPerScreen}/mo per screen`;
+              ? `$${monthlyPerScreen}/mo eq.`
+              : `$${monthlyPerScreen}/mo per screen`;
 
             const encodedPlan = encodeURIComponent(
-              `${plan.duration} Plan (${deviceCount} ${deviceCount === 1 ? 'Device' : 'Devices'}) for £${finalPrice}`
+              `${plan.duration} Plan (${deviceCount} ${deviceCount === 1 ? 'Device' : 'Devices'}) for $${finalPrice}`
             );
             const whatsappOrderUrl = `${SITE_CONFIG.whatsappBaseUrl}?text=Hello%20Televo%20IPTV%2C%20I%20would%20like%20to%20order%20the%20${encodedPlan}`;
             const askWhatsappUrl = `${SITE_CONFIG.whatsappBaseUrl}?text=Hello%20Televo%20IPTV%2C%20I%20have%20a%20question%20about%20the%20${encodeURIComponent(plan.duration)}%20Plan%20(${deviceCount}%20${deviceCount === 1 ? 'Device' : 'Devices'})`;
@@ -222,7 +220,7 @@ export default function PricingSection({ title, subtitle }) {
                   <div className="ribbon">{plan.badge}</div>
                 )}
 
-                {/* Top Badge Slot (in document flow, never covers price or title) */}
+                {/* Top Badge Slot */}
                 <div className="badge-row">
                   {plan.badge && !plan.isPopular ? (
                     <span className="best-deal">{plan.badge}</span>
@@ -240,8 +238,8 @@ export default function PricingSection({ title, subtitle }) {
                     </span>
                   </div>
                   <div className="price-wrap">
-                    <span className="price">£{finalPrice}</span>
-                    <span className="price-old">£{finalOriginalPrice}</span>
+                    <span className="price">${finalPrice}</span>
+                    <span className="price-old">${finalOriginalPrice}</span>
                   </div>
                 </div>
 
@@ -265,7 +263,7 @@ export default function PricingSection({ title, subtitle }) {
                   ))}
                 </ul>
 
-                {/* Primary Action Button (Matching Exact Spec: GET X PLAN ›) */}
+                {/* Primary Action Button */}
                 <div className="mt-auto pt-4">
                   <a
                     href={whatsappOrderUrl}

@@ -10,12 +10,12 @@ export default function SEO({
   schema = null,
 }) {
   const fullTitle = title
-    ? `${title} | ${SITE_CONFIG.serviceName}`
-    : `${SITE_CONFIG.serviceName} UK | Premium IPTV Subscription & Streaming Service`;
+    ? `${title} | ${SITE_CONFIG.serviceName} USA`
+    : `${SITE_CONFIG.serviceName} USA | Premium 4K IPTV Subscription & Streaming Service`;
 
   const metaDesc =
     description ||
-    'Discover Televo IPTV in the UK. Explore reliable IPTV subscriptions in GBP, compatible devices, step-by-step setup guides, and dedicated UK customer support.';
+    'Discover Televo IPTV in the United States. Explore reliable 4K IPTV subscriptions in USD, compatible devices, step-by-step setup guides, and 24/7 US customer support.';
 
   const canonical = canonicalUrl ? `${SITE_CONFIG.domain}${canonicalUrl}` : SITE_CONFIG.domain;
 
@@ -46,7 +46,7 @@ export default function SEO({
     updateMeta('og:url', canonical, true);
     updateMeta('og:site_name', `${SITE_CONFIG.brandName} - ${SITE_CONFIG.serviceName}`, true);
     updateMeta('og:image', ogImage, true);
-    updateMeta('og:locale', 'en_GB', true);
+    updateMeta('og:locale', 'en_US', true);
 
     // Update Twitter
     updateMeta('twitter:card', 'summary_large_image');
