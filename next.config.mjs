@@ -18,6 +18,11 @@ const nextConfig = {
         destination: '/blog/how-to-install-iptv-on-amazon-firestick',
         permanent: true,
       },
+      {
+        source: '/blog/install-iptv-firestick',
+        destination: '/blog/how-to-install-iptv-on-amazon-firestick',
+        permanent: true,
+      },
       // Samsung redirects
       {
         source: '/blog/how-to-set-up-televo-iptv-samsung-smart-tv',
@@ -26,6 +31,11 @@ const nextConfig = {
       },
       {
         source: '/blog/how-to-setup-iptv-on-samsung-smart-tv',
+        destination: '/blog/how-to-install-iptv-on-samsung-smart-tv',
+        permanent: true,
+      },
+      {
+        source: '/blog/install-iptv-samsung-tv',
         destination: '/blog/how-to-install-iptv-on-samsung-smart-tv',
         permanent: true,
       },
@@ -51,6 +61,16 @@ const nextConfig = {
         destination: '/blog/best-iptv-player-apps-smart-tv-firestick',
         permanent: true,
       },
+      {
+        source: '/blog/best-iptv-players',
+        destination: '/blog/best-iptv-player-apps-smart-tv-firestick',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-iptv-players-2026',
+        destination: '/blog/best-iptv-player-apps-smart-tv-firestick',
+        permanent: true,
+      },
       // Setup master guide redirects
       {
         source: '/blog/complete-uk-iptv-setup-guide-televo',
@@ -64,6 +84,11 @@ const nextConfig = {
       },
       {
         source: '/blog/complete-us-iptv-setup-guide',
+        destination: '/blog/complete-master-us-iptv-setup-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/complete-iptv-setup-guide',
         destination: '/blog/complete-master-us-iptv-setup-guide',
         permanent: true,
       },

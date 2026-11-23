@@ -78,7 +78,7 @@ export default function AboutPage() {
             <h2 className="text-lg font-bold text-[#0A1E3F] mb-2">Technical Excellence &amp; US Routing</h2>
             <p className="text-xs text-slate-600 leading-relaxed">
               We continually optimize our server clusters to interface seamlessly with primary US broadband networks—including Comcast Xfinity, AT&amp;T Fiber, Spectrum, Verizon Fios, and Cox. This dedicated routing drastically reduces latency and eliminates buffering, detailed further in our{' '}
-              <Link href="/blog/how-to-fix-iptv-buffering" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
+              <Link href="/blog/how-to-stop-iptv-buffering-guide" className="text-[#0854c4] font-semibold underline underline-offset-2 hover:text-[#0A1E3F]">
                 anti-buffering guide
               </Link>
               .
